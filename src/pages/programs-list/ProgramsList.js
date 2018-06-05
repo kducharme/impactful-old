@@ -1,4 +1,5 @@
 import React from 'react';
+import PrimaryNavigation from '../../global/navigation-primary/PrimaryNavigation';
 
 export default class ProgramsList extends React.Component {
     constructor(props) {
@@ -7,7 +8,10 @@ export default class ProgramsList extends React.Component {
 
     render() {
         return (
-            <h2>ProgramsList</h2>
+            <React.Fragment>
+                <PrimaryNavigation />
+                <h2>ProgramsList</h2>
+            </React.Fragment>
         )
     }
 }

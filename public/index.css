@@ -34,8 +34,10 @@ nav {
       padding-top: 2px; }
     nav .nav__left .nav__link {
       margin-right: 50px;
-      letter-spacing: .4px;
-      opacity: .5; }
+      letter-spacing: 0.4px;
+      opacity: 0.5;
+      color: white;
+      text-decoration: none; }
   nav .nav__right {
     display: flex;
     justify-content: flex-end;
@@ -49,16 +51,22 @@ nav {
       margin-right: 20px;
       color: white;
       font-size: 13px;
-      background-color: #4C505F;
+      background-color: #4c505f;
       border-radius: 4px;
       border: none; }
     nav .nav__right .nav__right--search::placeholder {
       color: white;
-      opacity: .5; }
-  nav .nav__right--user,
-  nav .nav__link {
-    color: white;
-    text-decoration: none; }
+      opacity: 0.5; }
+    nav .nav__right .nav__right--search:focus {
+      cursor: text; }
+  nav .nav__right--user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row; }
+  nav .nav__right--user > p {
+    margin-right: 5px;
+    color: white; }
   nav .active {
     font-weight: 600;
     opacity: 1 !important; }
