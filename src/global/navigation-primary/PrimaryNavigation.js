@@ -18,7 +18,7 @@ class PrimaryNavigation extends React.Component {
             </Link>
           </span>
           <span className="nav__right">
-            <input className="nav__right--search" />
+            <input className="nav__right--search" placeholder='Search people or projects…' />
             <p className='nav__right--user'>Kyle Ducharme</p>
           </span>
 
