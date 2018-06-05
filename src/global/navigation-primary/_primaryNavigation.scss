@@ -1,15 +1,54 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 nav {
+  @include display-flex(flex-start, center, row);
+  background-color: $colorPrimaryDark;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100vw;
+  padding: 0 30px 0 30px;
+  font-size: 14px;
+
+  .nav__left {
     @include display-flex(flex-start, center, row);
-    background-color: $colorPrimaryDark;
-    height: 50px;
-    width: 100vw;
+    width: 60%;
 
-    .nav__link{
-        color: white;
-        text-decoration: none;
+    img {
+      margin-right: 60px;
+      padding-top: 2px;
     }
-}
 
+    .nav__link {
+      margin-right: 50px;
+      letter-spacing: .4px;
+      opacity: .5;
+    }
+  }
+
+  .nav__right {
+    @include display-flex(flex-end, center, row);
+    width: 40%;
+
+    .nav__right--search {
+        height: 38px;
+        width: 290px;
+        background-color: #4C505F;
+        border-radius: 4px;
+        border: none;
+    }
+
+  }
+
+  .nav__right--user,
+  .nav__link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .active {
+      font-weight: $weightMedium;
+      opacity: 1!important;
+  }
+
+}

@@ -3,6 +3,16 @@
 * { margin: 0; }
 
 // Fonts
-h1, h2, h3, h4, h5, a, label, button {
+h1, h2, h3, h4, h5, p, a, label, button {
     font-family: $fontPrimary;
+}
+
+// Inputs and buttons
+button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus  {
+    cursor: pointer;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    outline: none;
 }
