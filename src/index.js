@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
+import PageRouter from './PageRouter'
 
-ReactDOM.render(<p>checking if it works!</p>, document.getElementById('root'));
+ReactDOM.render(<PageRouter />, document.getElementById('root'));
 registerServiceWorker();

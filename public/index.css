@@ -1,5 +1,17 @@
 * {
   margin: 0; }
 
-p {
-  color: blue; }
+h1, h2, h3, h4, h5, a, label, button {
+  font-family: "Lato", "Open sans"; }
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  background-color: #343849;
+  height: 50px;
+  width: 100vw; }
+  nav .nav__link {
+    color: white;
+    text-decoration: none; }

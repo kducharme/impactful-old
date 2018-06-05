@@ -1,0 +1,10 @@
+@import 'variables';
+
+// All mixins used throughout app
+
+@mixin display-flex ($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

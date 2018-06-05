@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+nav {
+    @include display-flex(flex-start, center, row);
+    background-color: $colorPrimaryDark;
+    height: 50px;
+    width: 100vw;
+
+    .nav__link{
+        color: white;
+        text-decoration: none;
+    }
+}
+
