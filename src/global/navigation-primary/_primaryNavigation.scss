@@ -1,15 +1,69 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 nav {
+  @include display-flex(flex-start, center, row);
+  background-color: $colorPrimaryDark;
+  height: 50px;
+  width: 100vw;
+  padding: 0 30px 0 30px;
+  font-size: 14px;
+
+  .nav__left {
     @include display-flex(flex-start, center, row);
-    background-color: $colorPrimaryDark;
-    height: 50px;
-    width: 100vw;
+    width: 60%;
 
-    .nav__link{
-        color: white;
-        text-decoration: none;
+    img {
+      margin-right: 60px;
+      padding-top: 2px;
     }
-}
 
+    .nav__link {
+      margin-right: 50px;
+      letter-spacing: 0.4px;
+      opacity: 0.5;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .nav__right {
+    @include display-flex(flex-end, center, row);
+    width: 40%;
+
+    .nav__right--search {
+      height: 38px;
+      width: 290px;
+      padding-left: 15px;
+      margin-right: 20px;
+      color: white;
+      font-size: 13px;
+      background-color: #4c505f;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .nav__right--search::placeholder {
+      color: white;
+      opacity: 0.5;
+    }
+
+    .nav__right--search:focus {
+        cursor: text;
+    }
+  }
+
+  .nav__right--user {
+    @include display-flex(flex-start, center, row);
+  }
+
+  .nav__right--user > p {
+    margin-right: 5px;
+    color: white;
+  }
+
+  .active {
+    font-weight: $weightMedium;
+    opacity: 1 !important;
+  }
+}
