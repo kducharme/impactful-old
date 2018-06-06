@@ -3,13 +3,13 @@ Currently, fragmented and outdated software are making it extremely difficult fo
 
 Impactful's platform introduces a bottom-up, automated approach to managing programs, which helps stakeholders understand the impact that the organization is having on their mission, in real-time.
 
-## Tech stack:
+### Tech stack:
 - SCSS
 - React
 - Python
 - SQL
 
-## To contribute:
+### To contribute:
 If you're interested in helping build Impactful, get started by:
 1. Fork this repo
 1. ```npm install -g create-react-app```
