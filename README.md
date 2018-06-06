@@ -1,12 +1,18 @@
 # Impactful
-Impactful makes launching, managing, and growing programs simple and effective for any non-profit, no matter their mission. Currently, fragmented and outdated software are forcing non-profit employees to spend at least 30% of their time, worth on average $13,000 per employee per year, doing things that could be automated or avoided all together. Impactful seeks to solve this.
+Currently, fragmented and outdated software are making it extremely difficult for non-profits to quantify their impact and automate their workflow. On average, employees at non-profits are spending 30% of their time, worth on average $13k per person per year, doing tasks that could be automated or avoided all together.
 
-## Core features:
-1. **Effective program management** - ensuring that programs are setup and managed in a way that contributes ot the core mission of the organization
-1. **On-site project management** - whether you have one site or 200, Impactful makes planning and implementing a breeze
-1. **Digital asset management** - easily share digital assets across the organization with built-in asset management system
-1. **Task tracking** - assign, set dates, and track tasks associated with projects and programs
-1. **Mobile management** - manage programs and projects on the go and easily take pictures, upload, and share with your staff while on-site
+Impactful's platform introduces a bottom-up, automated approach to managing programs, which helps stakeholders understand the impact that the organization is having on their mission, in real-time.
 
-## Contributions:
-If you're interested in helping build Impactful, reach out at ducharme.kyle@gmail.com
+## Tech stack:
+- SCSS
+- React
+- Python
+- SQL
+
+## To contribute:
+If you're interested in helping build Impactful, get started by:
+1. Fork this repo
+1. ```npm install -g create-react-app```
+1. ```npm install```
+1. ```npm start```
+
