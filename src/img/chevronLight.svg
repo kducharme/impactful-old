@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>chevron</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Discovery-(v2)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-4" transform="translate(-418.000000, -338.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="chevron" transform="translate(418.000000, 338.000000)">
+                <path d="M1.6846666,0.2589039 L5.7256327,4.067964 C5.8797133,4.2132021 6.1202867,4.2132021 6.2743673,4.067964 L10.3153334,0.2589039 C10.4695362,0.1135506 10.7103401,0.1136816 10.8643846,0.2592027 L11.6921964,1.0412112 C11.8527857,1.192915 11.8599888,1.4460785 11.7082851,1.6066678 C11.7030758,1.6121821 11.6977108,1.6175472 11.6921964,1.6227564 L6.274684,6.7405145 C6.1205173,6.886151 5.8794827,6.886151 5.725316,6.7405145 L0.3078036,1.6227564 C0.1472143,1.4710526 0.1400112,1.2178891 0.2917149,1.0572998 C0.2969242,1.0517855 0.3022892,1.0464204 0.3078036,1.0412112 L1.1356154,0.2592027 C1.2896599,0.1136816 1.5304638,0.1135506 1.6846666,0.2589039 Z" id="filters__type--dropdown"></path>
+            </g>
+        </g>
+    </g>
+</svg>

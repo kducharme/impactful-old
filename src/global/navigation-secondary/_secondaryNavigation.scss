@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.sub {
+  @include display-flex(flex-start, center, row);
+  background-color: white;
+  border-bottom: 1px solid $grayBorder;
+  height: 40px;
+  width: 100vw;
+  padding: 0 30px 0 30px;
+  font-size: 13px;
+
+  .sub__nav {
+    @include display-flex(flex-start, center, row);
+
+    .sub__nav--link {
+        margin-top: -2px;
+    }
+
+    svg {
+        height: 18px;
+        width: auto;
+        margin: 0 6px 0 4px;
+    }
+
+    .sub__active {
+      color: $colorAccent;
+      font-weight: 600;
+    }
+
+    .sub__divider {
+      fill: $colorArrow;
+    }
+  }
+
+  // Hides arrow depending on depth of pagination
+  .sub__divider--hide {
+    display: none !important;
+  }
+}

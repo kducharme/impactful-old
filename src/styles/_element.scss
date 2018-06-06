@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, p, a, label, button {
     font-family: $fontPrimary;
 }
 
+a {
+    text-decoration: none;
+}
+
 // Inputs and buttons
 button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus  {
     cursor: pointer;
@@ -18,4 +22,12 @@ button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:
     -ms-transition: none;
     -o-transition: none;
     outline: none;
+}
+
+// Primary page content
+
+.content {
+    background-color: $colorBackground;
+    height: calc(100vh - 44px - 40px); // Height of screen minus 2 navs
+    padding: 0 80px 0 80px;
 }
