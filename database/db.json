@@ -1,0 +1,117 @@
+{
+    "organizations": [
+        {
+            "id": 1,
+            "name": "Appalachia Service Project",
+            "mission": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "vision": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
+            "location": "Address here"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "first_name": "Joe",
+            "last_name": "Shmoe",
+            "Title": "Program Manager",
+            "email": "joe@shmoe.com",
+            "date_created": "Date here",
+            "date_deleted": "Date here",
+            "organization": 1,
+            "permission": 1
+        }
+    ],
+    "permissions": [
+        {
+            "id": 1,
+            "type": "Admin"
+        }
+    ],
+    "programs": [
+        {
+            "id": 1,
+            "name": "Home Repair Program",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            "date_created": "Date here",
+            "date_deleted": "Date here",
+            "date_archived": "Date here",
+            "budget": "500,000",
+            "organization": 1
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "name": "Smith's Home Fixup",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            "date_created": "Date here",
+            "date_due": "Date here",
+            "date_completed": "Date here",
+            "date_deleted": "Date here",
+            "budget": "500,000",
+            "type": 1,
+            "program": 1,
+            "owner": 1,
+            "location": 1
+        }
+    ],
+    "project_notes": [
+        {
+            "id": 1,
+            "text": "Smith's Home Fixup",
+            "date_created": "Date here",
+            "date_deleted": "Date here",
+            "project": 1,
+            "image": 1,
+            "author": 1
+        }
+    ],
+    "project_images": [
+        {
+            "id": 1,
+            "image": "img/proj.png",
+            "description": "Smith's Home Fixup",
+            "project": 1,
+            "author": 1
+        }
+    ],
+    "project_group": [
+        {
+            "id": 1,
+            "name": "Kyle's projects",
+            "date_created": "Date here",
+            "date_deleted": "Date here",
+            "projects": [1, 2, 3],
+            "public": true,
+            "creator": 1
+        }
+    ],
+    "project_types": [
+        {
+            "id": 1,
+            "name": "Construction"
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Smith's Home Fixup",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            "date_created": "Date here",
+            "date_due": "Date here",
+            "date_completed": "Date here",
+            "date_deleted": "Date here",
+            "project": 1,
+            "owner": 1
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "street_address": "724 Croley Drive",
+            "city": "Nashville",
+            "state": "Tennessee",
+            "zip": "37209"
+        }
+    ]
+}
