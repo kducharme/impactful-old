@@ -19,7 +19,7 @@ nav {
   align-items: center;
   flex-direction: row;
   background-color: #343849;
-  height: 50px;
+  height: 44px;
   width: 100vw;
   padding: 0 30px 0 30px;
   font-size: 14px; }
@@ -45,14 +45,14 @@ nav {
     flex-direction: row;
     width: 40%; }
     nav .nav__right .nav__right--search {
-      height: 38px;
+      height: 34px;
       width: 290px;
       padding-left: 15px;
       margin-right: 20px;
       color: white;
       font-size: 13px;
       background-color: #4c505f;
-      border-radius: 4px;
+      border-radius: 3px;
       border: none; }
     nav .nav__right .nav__right--search::placeholder {
       color: white;
