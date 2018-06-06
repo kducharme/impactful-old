@@ -20,7 +20,7 @@ nav {
 
     .nav__link {
       margin-right: 50px;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.7px;
       opacity: 0.5;
       color: white;
     }
@@ -63,6 +63,6 @@ nav {
 
   .active {
     font-weight: $weightMedium;
-    opacity: 1 !important;
+    opacity: 1!important;
   }
 }

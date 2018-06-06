@@ -15,6 +15,7 @@
 
     .sub__nav--link {
         margin-top: -2px;
+        color: $colorPrimaryDark;
     }
 
     svg {
@@ -37,4 +38,10 @@
   .sub__divider--hide {
     display: none !important;
   }
+  
+  // Hides pagination link depending on page
+  .sub__hide {
+    display: none !important;
+  }
+
 }

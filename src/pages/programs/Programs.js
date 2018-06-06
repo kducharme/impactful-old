@@ -12,8 +12,7 @@ export default class Programs extends React.Component {
       <div className="programs">
         <PrimaryNavigation />
         <SecondaryNavigation />
-        <div className="content">
-          <h2>Programs</h2>
+        <div className="content content__sub">
         </div>
       </div>
     );
