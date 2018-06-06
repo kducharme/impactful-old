@@ -32,7 +32,6 @@ class UserGraveyardManager(UserManager):
 class User(AbstractUser):
     role = models.CharField(max_length=30, default=None, blank=True, null=True)
     first_name = models.CharField(max_length=32, default=None, blank=True, null=True)
-    middle_name = models.CharField(max_length=32, default=None, blank=True, null=True)
     last_name = models.CharField(max_length=32, default=None, blank=True, null=True)
     email = models.CharField(max_length=64, unique=True)
     date_created = models.DateField(auto_now_add=True)
@@ -74,6 +73,7 @@ class Location(models.Model):
     city = models.CharField(max_length=100)
     state_province = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
+    zip = models.FloatField()
     date_created = models.DateField(auto_now_add=True)
     date_deleted = models.DateField(null=True)
 # TODO: figure out relations so that we can chain things easily (or decide if this is necessary)
