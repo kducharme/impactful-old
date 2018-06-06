@@ -8,6 +8,9 @@ h1, h2, h3, h4, h5, p, a, label, button {
 a {
   text-decoration: none; }
 
+button {
+  border: none; }
+
 button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus {
   cursor: pointer;
   -webkit-transition: none;
@@ -98,7 +101,8 @@ nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: row; }
+    flex-direction: row;
+    width: 50%; }
     .sub .sub__nav .sub__nav--link {
       margin-top: -2px;
       color: #343849; }
@@ -111,7 +115,28 @@ nav {
       font-weight: 600; }
     .sub .sub__nav .sub__divider {
       fill: #C4C6CD; }
+  .sub .sub__links {
+    width: 20%; }
+  .sub .sub__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    width: 30%; }
+    .sub .sub__actions .sub__actions--button {
+      height: 30px;
+      width: 100px; }
+    .sub .sub__actions .sub__actions--button:hover {
+      background-color: #2142B8; }
   .sub .sub__divider--hide {
     display: none !important; }
   .sub .sub__hide {
     display: none !important; }
+
+.button__primary {
+  background-color: #3B60E4;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3px; }

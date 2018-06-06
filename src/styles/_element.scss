@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    border: none;
+}
+
 // Inputs and buttons
 button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus  {
     cursor: pointer;

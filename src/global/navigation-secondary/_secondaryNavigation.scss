@@ -12,6 +12,7 @@
 
   .sub__nav {
     @include display-flex(flex-start, center, row);
+    width: 50%;
 
     .sub__nav--link {
         margin-top: -2px;
@@ -31,6 +32,25 @@
 
     .sub__divider {
       fill: $colorArrow;
+    }
+
+  }
+
+  .sub__links {
+    width: 20%;
+  }
+
+  .sub__actions {
+    @include display-flex(flex-end, center, row);
+    width: 30%;
+
+    .sub__actions--button {
+      height: 30px;
+      width: 100px;
+    }
+
+    .sub__actions--button:hover {
+      background-color: $colorAccentHover;
     }
   }
 

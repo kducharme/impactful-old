@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ButtonPrimary } from '../components/button/ButtonPrimary';
 
 class SecondaryNavigation extends React.Component {
   constructor(props) {
@@ -65,7 +66,7 @@ class SecondaryNavigation extends React.Component {
           </span>
 
           <span className='sub__actions'>
-
+            <ButtonPrimary text='New program' style='sub__actions--button' event={() => console.log('clicked')}/>
           </span>
 
       </div>
