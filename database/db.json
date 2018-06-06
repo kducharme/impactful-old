@@ -13,7 +13,7 @@
             "id": 1,
             "first_name": "Joe",
             "last_name": "Shmoe",
-            "Title": "Program Manager",
+            "title": "Program Manager",
             "email": "joe@shmoe.com",
             "date_created": "Date here",
             "date_deleted": "Date here",
@@ -45,14 +45,22 @@
             "name": "Smith's Home Fixup",
             "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
             "date_created": "Date here",
+            "date_updated": "Date here",
             "date_due": "Date here",
             "date_completed": "Date here",
             "date_deleted": "Date here",
             "budget": "500,000",
             "type": 1,
             "program": 1,
-            "owner": 1,
+            "manager": 1,
             "location": 1
+        }
+    ],
+    "project_users": [
+        {
+            "id": 1,
+            "user": 1,
+            "project": 1
         }
     ],
     "project_notes": [
@@ -61,6 +69,7 @@
             "text": "Smith's Home Fixup",
             "date_created": "Date here",
             "date_deleted": "Date here",
+            "read": false,
             "project": 1,
             "image": 1,
             "author": 1
@@ -71,25 +80,32 @@
             "id": 1,
             "image": "img/proj.png",
             "description": "Smith's Home Fixup",
+            "date_uploaded": "Date here",
             "project": 1,
             "author": 1
-        }
-    ],
-    "project_group": [
-        {
-            "id": 1,
-            "name": "Kyle's projects",
-            "date_created": "Date here",
-            "date_deleted": "Date here",
-            "projects": [1, 2, 3],
-            "public": true,
-            "creator": 1
         }
     ],
     "project_types": [
         {
             "id": 1,
             "name": "Construction"
+        }
+    ],
+    "group": [
+        {
+            "id": 1,
+            "name": "Kyle's projects",
+            "date_created": "Date here",
+            "date_deleted": "Date here",
+            "public": true,
+            "creator": 1
+        }
+    ],
+    "group_projects": [
+        {
+            "id": 1,
+            "group": 1,
+            "project": 2
         }
     ],
     "tasks": [
