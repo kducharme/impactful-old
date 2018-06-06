@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>filters__type--dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Delivery" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Monitors-Page-(After)" transform="translate(-78.000000, -539.000000)" fill="#A3A3A3" fill-rule="nonzero">
+            <g id="filters" transform="translate(66.000000, 52.000000)">
+                <g id="filters__type" transform="translate(0.000000, 473.000000)">
+                    <path d="M13.6846666,14.2589039 L17.7256327,18.067964 C17.8797133,18.2132021 18.1202867,18.2132021 18.2743673,18.067964 L22.3153334,14.2589039 C22.4695362,14.1135506 22.7103401,14.1136816 22.8643846,14.2592027 L23.6921964,15.0412112 C23.8527857,15.192915 23.8599888,15.4460785 23.7082851,15.6066678 C23.7030758,15.6121821 23.6977108,15.6175472 23.6921964,15.6227564 L18.274684,20.7405145 C18.1205173,20.886151 17.8794827,20.886151 17.725316,20.7405145 L12.3078036,15.6227564 C12.1472143,15.4710526 12.1400112,15.2178891 12.2917149,15.0572998 C12.2969242,15.0517855 12.3022892,15.0464204 12.3078036,15.0412112 L13.1356154,14.2592027 C13.2896599,14.1136816 13.5304638,14.1135506 13.6846666,14.2589039 Z" id="filters__type--dropdown"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

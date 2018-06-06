@@ -5,6 +5,12 @@
 h1, h2, h3, h4, h5, p, a, label, button {
   font-family: "Lato", "Open sans"; }
 
+a {
+  text-decoration: none; }
+
+button {
+  border: none; }
+
 button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus {
   cursor: pointer;
   -webkit-transition: none;
@@ -12,6 +18,16 @@ button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:
   -ms-transition: none;
   -o-transition: none;
   outline: none; }
+
+.content {
+  background-color: #F7F8F9;
+  padding: 0 80px 0 80px; }
+
+.content__sub {
+  height: calc(100vh - 44px - 40px); }
+
+.content__full {
+  height: calc(100vh - 44px); }
 
 nav {
   display: flex;
@@ -34,10 +50,9 @@ nav {
       padding-top: 2px; }
     nav .nav__left .nav__link {
       margin-right: 50px;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.7px;
       opacity: 0.5;
-      color: white;
-      text-decoration: none; }
+      color: white; }
   nav .nav__right {
     display: flex;
     justify-content: flex-end;
@@ -70,3 +85,58 @@ nav {
   nav .active {
     font-weight: 600;
     opacity: 1 !important; }
+
+.sub {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  border-bottom: 1px solid #E2E2E2;
+  height: 40px;
+  width: 100vw;
+  padding: 0 30px 0 30px;
+  font-size: 13px; }
+  .sub .sub__nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 50%; }
+    .sub .sub__nav .sub__nav--link {
+      margin-top: -2px;
+      color: #343849; }
+    .sub .sub__nav svg {
+      height: 18px;
+      width: auto;
+      margin: 0 6px 0 4px; }
+    .sub .sub__nav .sub__active {
+      color: #3B60E4;
+      font-weight: 600; }
+    .sub .sub__nav .sub__divider {
+      fill: #C4C6CD; }
+  .sub .sub__links {
+    width: 20%; }
+  .sub .sub__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    width: 30%; }
+    .sub .sub__actions .sub__actions--button {
+      height: 30px;
+      width: 100px; }
+    .sub .sub__actions .sub__actions--button:hover {
+      background-color: #2142B8; }
+  .sub .sub__divider--hide {
+    display: none !important; }
+  .sub .sub__hide {
+    display: none !important; }
+
+.button__primary {
+  background-color: #3B60E4;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3px; }

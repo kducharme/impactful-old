@@ -10,7 +10,9 @@ export default class Dashboard extends React.Component {
     return (
       <React.Fragment>
         <PrimaryNavigation />
-        <h2>Dashboard</h2>
+        <div className="content content__full">
+          <h2>Dashboard</h2>
+        </div>
       </React.Fragment>
     );
   }
