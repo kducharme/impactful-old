@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import { ButtonPrimary } from '../button/ButtonPrimary';
+
 
 export default class Card extends React.Component {
   constructor(props) {
@@ -25,13 +27,15 @@ export default class Card extends React.Component {
       <React.Fragment>
         {this.props.cards.map(card => {
           return (
-            <div className="card" key={card.id} onMouseEnter={this.showOverlay} onMouseLeave={this.hideOverlay}>
-              <span className="card__hover hide">
+            <div className='card' key={card.id} onMouseEnter={this.showOverlay} onMouseLeave={this.hideOverlay}>
+              <span className='card__hover hide'>
+                <input type='checkbox' id={card.name}></input>
+                <ButtonPrimary text='View project' style='card__hover--button' onClick={null} />
               </span>
 
-              <div className="card__content">
-                <h4 className="card__title">{card.name}</h4>
-                <h4 className="card__description">{card.description}</h4>
+              <div className='card__content'>
+                <h4 className='card__title'>{card.name}</h4>
+                <h4 className='card__description'>{card.description}</h4>
               </div>
             </div>
           );

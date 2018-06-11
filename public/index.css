@@ -171,6 +171,10 @@ nav {
       -webkit-box-orient: vertical; }
 
 .card__hover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
   z-index: 999;
   position: relative;
   top: 0;
@@ -178,10 +182,25 @@ nav {
   right: 0;
   height: 160px;
   width: 208px;
-  background-color: #343849;
-  opacity: .9;
+  background-color: rgba(52, 56, 73, 0.94);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px; }
+  .card__hover input {
+    margin: 12px 0 0 12px;
+    border-radius: 500px;
+    height: 18px;
+    width: auto; }
+  .card__hover .card__hover--button {
+    margin-top: 32px;
+    align-self: center;
+    height: 34px;
+    width: 110px;
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1 !important; }
+  .card__hover .card__hover--button:hover {
+    background-color: #3B60E4;
+    border: none; }
 
 .hide {
   display: none; }
