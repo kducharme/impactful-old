@@ -18,10 +18,11 @@
     "users": [
         {
             "id": 1,
-            "first_name": "Joe",
-            "last_name": "Shmoe",
+            "first_name": "Meg",
+            "last_name": "Ducharme",
             "title": "Program Manager",
-            "email": "joe@shmoe.com",
+            "email": "meg@ducharme.com",
+            "image": "img/meg.jpg",
             "date_created": "January 7, 2018",
             "date_deleted": null,
             "organization": 1,
@@ -33,6 +34,7 @@
             "last_name": "Ducharme",
             "title": "Volunteer Experience Manager",
             "email": "Kyle@Ducharme.com",
+            "image": "img/kyle.jpg",
             "date_created": "February 12, 2018",
             "date_deleted": null,
             "organization": 1,
@@ -40,10 +42,11 @@
         },
         {
             "id": 3,
-            "first_name": "Jimmy",
-            "last_name": "Armstrong",
+            "first_name": "Delaine",
+            "last_name": "Wendling",
             "title": "Consultant",
-            "email": "Jimmy@Armstrong.com",
+            "email": "Delaine@Wendling.com",
+            "image": "img/delaine.jpg",
             "date_created": "May 4, 2018",
             "date_deleted": null,
             "organization": 1,
@@ -64,7 +67,7 @@
         {
             "id": 1,
             "name": "Home Repair Program",
-            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            "description": "Since 1969, ASP's Home Repair Program has made homes warmer, safer, and drier in Central Appalachia.",
             "date_created": "March 12, 1982",
             "date_deleted": null,
             "date_archived": null,
@@ -73,9 +76,9 @@
             "manager": 1
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "New Build",
-            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            "description": "After responding to floods in Tennessee, ASP officially launched its New Build program.",
             "date_created": "January 12, 2018",
             "date_deleted": null,
             "date_archived": null,

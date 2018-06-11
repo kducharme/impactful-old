@@ -7,15 +7,16 @@ export default class Programs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      program: 1,
+      organization: 1,
+      programs: [],
       projects: []
     };
   }
 
   componentDidMount() {
-    fetch(`http://localhost:4000/projects?program=${this.state.program}`)
+    fetch(`http://localhost:4000/programs?programs=${this.state.organization}`)
       .then(r => r.json())
-      .then(projects => this.setState({ projects }));
+      .then(programs => this.setState({ programs }));
   }
 
   render() {
@@ -24,7 +25,7 @@ export default class Programs extends React.Component {
         <PrimaryNavigation />
         <SecondaryNavigation />
         <div className="content content__sub">
-          <Card projects={this.state.projects} />
+          <Card cards={this.state.programs} />
         </div>
       </div>
     );

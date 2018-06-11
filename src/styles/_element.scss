@@ -20,7 +20,7 @@ button {
 }
 
 // Inputs and buttons
-button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus  {
+button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active {
     cursor: pointer;
     -webkit-transition: none;
     -moz-transition: none;
@@ -39,6 +39,7 @@ button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:
 .content__sub {
     height: calc(100vh - 44px - 40px); // Height of screen minus 2 navs
     @include display-flex(flex-start, flex-start, row);
+    padding-top: 32px;
 }
 
 .content__full {

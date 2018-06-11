@@ -11,7 +11,7 @@ a {
 button {
   border: none; }
 
-button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active, div:active, div:focus {
+button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:active {
   cursor: pointer;
   -webkit-transition: none;
   -moz-transition: none;
@@ -28,7 +28,8 @@ button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-top: 32px; }
 
 .content__full {
   height: calc(100vh - 44px); }
@@ -142,20 +143,67 @@ nav {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  position: relative;
   background-color: white;
-  padding: 20px;
   border: 1px solid #E2E2E2;
+  border-radius: 3px;
   height: 250px;
-  width: 210px; }
-  .card .card__title {
-    font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 5px;
-    color: #343849; }
-  .card .card__description {
-    font-size: 13px;
-    font-weight: 400;
-    color: #6C6C6C; }
+  width: 210px;
+  margin-right: 20px; }
+  .card .card__content {
+    position: absolute;
+    z-index: 998;
+    padding: 20px; }
+    .card .card__content .card__title {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #343849; }
+    .card .card__content .card__description {
+      font-size: 13px;
+      font-weight: 400;
+      color: #858892;
+      line-height: 1.5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; }
+
+.card__hover {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 999;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  width: 208px;
+  background-color: rgba(52, 56, 73, 0.94);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px; }
+  .card__hover input {
+    margin: 12px 0 0 12px;
+    border-radius: 500px;
+    height: 18px;
+    width: auto; }
+  .card__hover .card__hover--button {
+    margin-top: 32px;
+    align-self: center;
+    height: 34px;
+    width: 110px;
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1 !important; }
+  .card__hover .card__hover--button:hover {
+    background-color: #3B60E4;
+    border: none; }
+
+.hide {
+  display: none; }
 
 .button__primary {
   background-color: #3B60E4;
