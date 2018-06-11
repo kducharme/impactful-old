@@ -9,7 +9,8 @@ export default class Programs extends React.Component {
     this.state = {
       organization: 1,
       programs: [],
-      projects: []
+      projects: [],
+      selectedProjects: []
     };
   }
 
@@ -19,13 +20,19 @@ export default class Programs extends React.Component {
       .then(programs => this.setState({ programs }));
   }
 
+  selectProjects = (project) => {
+    this.setState(prevState => ({
+      selectedProjects: [...prevState.selectedProjects, project]
+    }));
+  }
+
   render() {
     return (
       <div className="programs">
         <PrimaryNavigation />
         <SecondaryNavigation />
         <div className="content content__sub">
-          <Card cards={this.state.programs} />
+          <Card cards={this.state.programs} select={this.selectProjects}/>
         </div>
       </div>
     );

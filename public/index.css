@@ -185,11 +185,24 @@ nav {
   background-color: rgba(52, 56, 73, 0.94);
   border-top-left-radius: 2px;
   border-top-right-radius: 2px; }
-  .card__hover input {
-    margin: 12px 0 0 12px;
-    border-radius: 500px;
+  .card__hover input[type="checkbox"] {
+    display: none; }
+  .card__hover input[type="checkbox"] + span {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    width: 18px;
     height: 18px;
-    width: auto; }
+    border-radius: 500px;
+    margin: 12px 0 0 12px;
+    vertical-align: middle;
+    background: transparent;
+    border: 1.5px solid white;
+    cursor: pointer; }
+  .card__hover input[type="checkbox"]:hover + span:hover {
+    background: rgba(255, 255, 255, 0.418); }
+  .card__hover input[type="checkbox"]:checked + span {
+    background: #09BC8A; }
   .card__hover .card__hover--button {
     margin-top: 32px;
     align-self: center;
