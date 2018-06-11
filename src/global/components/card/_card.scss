@@ -1,0 +1,24 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.card {
+    @include display-flex(flex-start, flex-start, column);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid $grayBorder;
+    height: 250px;
+    width: 210px;
+
+    .card__title {
+        font-size: 14px;
+        font-weight: 800;
+        margin-bottom: 5px;
+        color: $colorPrimaryDark;
+    }
+
+    .card__description {
+        font-size: 13px;
+        font-weight: 400;
+        color: $grayMedium;
+    }
+}
