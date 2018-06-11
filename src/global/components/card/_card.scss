@@ -3,22 +3,54 @@
 
 .card {
     @include display-flex(flex-start, flex-start, column);
+    position: relative;
     background-color: white;
-    padding: 20px;
     border: 1px solid $grayBorder;
+    border-radius: 3px;
     height: 250px;
     width: 210px;
+    margin-right: 20px;
+    
+    .card__content {
+        position: absolute;
+        z-index: 998;
+        padding: 20px;
 
-    .card__title {
-        font-size: 14px;
-        font-weight: 800;
-        margin-bottom: 5px;
-        color: $colorPrimaryDark;
+        .card__title {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: $colorFontDark;
+        }
+        
+        .card__description {
+            font-size: 13px;
+            font-weight: 400;
+            color: $colorFontMedium;
+            line-height: 1.5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+        }
     }
+}
 
-    .card__description {
-        font-size: 13px;
-        font-weight: 400;
-        color: $grayMedium;
-    }
+.card__hover {
+    z-index: 999;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    width: 208px;
+    background-color: $colorPrimaryDark;
+    opacity: .9;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.hide {
+    display: none;
 }

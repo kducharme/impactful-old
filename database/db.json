@@ -64,7 +64,7 @@
         {
             "id": 1,
             "name": "Home Repair Program",
-            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            "description": "Since 1969, ASP's Home Repair Program has made homes warmer, safer, and drier in Central Appalachia.",
             "date_created": "March 12, 1982",
             "date_deleted": null,
             "date_archived": null,
@@ -73,9 +73,9 @@
             "manager": 1
         },
         {
-            "id": 1,
+            "id": 2,
             "name": "New Build",
-            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+            "description": "After responding to floods in Tennessee, ASP officially launched its New Build program.",
             "date_created": "January 12, 2018",
             "date_deleted": null,
             "date_archived": null,
