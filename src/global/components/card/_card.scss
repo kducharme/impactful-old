@@ -2,77 +2,96 @@
 @import "../../../styles/mixins";
 
 .card {
-    @include display-flex(flex-start, flex-start, column);
-    position: relative;
-    background-color: white;
-    border: 1px solid $grayBorder;
-    border-radius: 3px;
-    height: 250px;
-    width: 210px;
-    margin-right: 20px;
-    
-    .card__content {
-        position: absolute;
-        z-index: 998;
-        padding: 20px;
+  @include display-flex(flex-start, flex-start, column);
+  position: relative;
+  background-color: white;
+  border: 1px solid $grayBorder;
+  border-radius: 3px;
+  height: 250px;
+  width: 210px;
+  margin-right: 20px;
 
-        .card__title {
-            font-size: 15px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            color: $colorFontDark;
-        }
-        
-        .card__description {
-            font-size: 13px;
-            font-weight: 400;
-            color: $colorFontMedium;
-            line-height: 1.5;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;  
-        }
+  .card__content {
+    position: absolute;
+    z-index: 998;
+    padding: 20px;
+
+    .card__title {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: $colorFontDark;
     }
+
+    .card__description {
+      font-size: 13px;
+      font-weight: 400;
+      color: $colorFontMedium;
+      line-height: 1.5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
 }
 
 .card__hover {
-    @include display-flex(flex-start, flex-start, column);
-    z-index: 999;
+  @include display-flex(flex-start, flex-start, column);
+  z-index: 999;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  width: 208px;
+  background-color: rgba(52, 56, 73, 0.94);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + span {
+    display: inline-block;
     position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 160px;
-    width: 208px;
-    background-color: rgba(52,56,73,0.94);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 500px;
+    margin: 12px 0 0 12px;
+    vertical-align: middle;
+    background: transparent;
+    border: 1.5px solid white;
+    cursor: pointer;
+  }
 
-    input {
-        margin: 12px 0 0 12px;
-        border-radius: 500px;
-        height: 18px;
-        width: auto;
-    }
+  input[type="checkbox"]:hover + .select__checkbox:hover {
+    background: rgba(255, 255, 255, 0.418);
+  }
 
-    .card__hover--button {
-        margin-top: 32px;
-        align-self: center;
-        height: 34px;
-        width: 110px;
-        background-color: transparent;
-        border: 2px solid white;
-        opacity: 1!important;
-    }
-    
-    .card__hover--button:hover {
-        background-color: $colorAccent;
-        border: none;
-    }
+  input[type="checkbox"]:checked + .select__checkbox {
+    background: $colorSuccess;
+  }
+
+  .card__hover--button {
+    margin-top: 32px;
+    align-self: center;
+    height: 34px;
+    width: 110px;
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1 !important;
+  }
+
+  .card__hover--button:hover {
+    background-color: $colorAccent;
+    border: none;
+  }
 }
 
 .hide {
-    display: none;
+  display: none;
 }
