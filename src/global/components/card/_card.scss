@@ -68,11 +68,11 @@
     cursor: pointer;
   }
 
-  input[type="checkbox"]:hover + span:hover {
+  input[type="checkbox"]:hover + .select__checkbox:hover {
     background: rgba(255, 255, 255, 0.418);
   }
 
-  input[type="checkbox"]:checked + span {
+  input[type="checkbox"]:checked + .select__checkbox {
     background: $colorSuccess;
   }
 
