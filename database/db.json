@@ -85,6 +85,17 @@
             "budget": "223,420",
             "organization": 1,
             "manager": 2
+        },
+        {
+            "id": 3,
+            "name": "Homeless Shelter",
+            "description": "This is a sample program that should not be showing. If it is, you fail.",
+            "date_created": "January 28, 2018",
+            "date_deleted": null,
+            "date_archived": null,
+            "budget": "5,220",
+            "organization": 2,
+            "manager": null
         }
     ],
     "projects": [

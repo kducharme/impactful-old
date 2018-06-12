@@ -37,9 +37,17 @@ button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:
 }
 
 .content__sub {
-    height: calc(100vh - 44px - 40px); // Height of screen minus 2 navs
     @include display-flex(flex-start, flex-start, row);
+    height: calc(100vh - 44px - 40px); // Height of screen minus 2 navs
+    flex-wrap: wrap;
     padding-top: 32px;
+}
+
+@media (max-width: 750px) {
+    .content__sub {
+        @include display-flex(center, flex-start, row);
+    }
+
 }
 
 .content__full {
