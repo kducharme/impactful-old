@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const GlobalContext = React.createContext();
 
@@ -53,9 +53,6 @@ export class GlobalProvider extends React.Component {
           projects: projects
         }))
       )
-
-      // http://localhost:4000/projects?program=1
-
   };
 
   showAllPrograms = () => {

@@ -142,12 +142,16 @@
 
   .card__hover--button {
     margin-top: 40px;
-    align-self: center;
+    align-self: center!important;
     height: 34px;
     width: 110px;
     background-color: transparent;
     border: 2px solid white;
     opacity: 1 !important;
+  }
+
+  .card__button {
+    align-self: center;
   }
 
   .card__hover--button:hover {

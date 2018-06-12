@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ButtonPrimary } from "../components/button/ButtonPrimary";
-import { GlobalProvider, GlobalContext } from "../../providers/GlobalProvider";
+import { GlobalContext } from "../../providers/GlobalProvider";
 
 class SecondaryNavigation extends React.Component {
   render() {

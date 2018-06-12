@@ -1,7 +1,5 @@
 import React from "react";
 import { ButtonPrimary } from "../button/ButtonPrimary";
-import { withRouter } from "react-router-dom";
-import { GlobalContext } from "../../../providers/GlobalProvider";
 
 export default class ProjectCard extends React.Component {
   constructor(props) {

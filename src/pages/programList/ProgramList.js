@@ -24,12 +24,6 @@ export default class ProgramList extends React.Component {
                     button={'View program'}
                     program={value.programActive}
                     />
-                <ProjectCard 
-                  cards={value.projects}
-                  click={() => console.log('proj click')}
-                  button={'View project'}
-                  program={value.programActive}
-                />
                 </div>
               </div>
             );
