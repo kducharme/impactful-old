@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const GlobalContext = React.createContext();
 
@@ -36,7 +36,6 @@ export class GlobalProvider extends React.Component {
 
   showNextLayer = (e) => {
     const selectedProgram = e.currentTarget.parentNode.parentNode.id;
-    console.log(this.state.organization, selectedProgram)
     fetch(
       `http://localhost:4000/programs?organization=${this.state.organization}&id=${selectedProgram}`
     )
@@ -44,7 +43,16 @@ export class GlobalProvider extends React.Component {
       .then(program => this.setState({
         programActive: program[0].id,
         programActiveName: program[0].name
-      }));
+      }))
+      .then( program =>
+        fetch(
+        `http://localhost:4000/projects?program=${selectedProgram}`
+      )
+        .then(r => r.json())
+        .then(projects => this.setState({
+          projects: projects
+        }))
+      )
   };
 
   showAllPrograms = () => {

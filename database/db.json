@@ -88,7 +88,7 @@
         },
         {
             "id": 3,
-            "name": "Homeless Shelter",
+            "name": "This better not be showing",
             "description": "This is a sample program that should not be showing. If it is, you fail.",
             "date_created": "January 28, 2018",
             "date_deleted": null,

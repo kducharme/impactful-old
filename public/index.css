@@ -269,12 +269,14 @@ nav {
     background: #09BC8A; }
   .card__hover .card__hover--button {
     margin-top: 40px;
-    align-self: center;
+    align-self: center !important;
     height: 34px;
     width: 110px;
     background-color: transparent;
     border: 2px solid white;
     opacity: 1 !important; }
+  .card__hover .card__button {
+    align-self: center; }
   .card__hover .card__hover--button:hover {
     background-color: #3B60E4;
     border: none; }
@@ -289,3 +291,39 @@ nav {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: .3px; }
+
+.program {
+  background-color: #F7F8F9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  height: calc(100vh - 44px - 40px);
+  flex-wrap: wrap; }
+
+.groups {
+  background-color: white;
+  border-right: 1px solid #E2E2E2;
+  width: 25%;
+  min-width: 320px;
+  max-width: 400px;
+  height: 100%; }
+  .groups .groups__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 80px;
+    border-bottom: 1px solid #E2E2E2;
+    padding: 0 30px 0 30px; }
+    .groups .groups__header p {
+      font-size: 18px;
+      font-weight: 800; }
+    .groups .groups__header .groups__button {
+      height: 34px;
+      width: 88px;
+      font-size: 12px;
+      color: white !important;
+      background-color: #343849; }
+    .groups .groups__header .groups__button:hover {
+      opacity: .8; }

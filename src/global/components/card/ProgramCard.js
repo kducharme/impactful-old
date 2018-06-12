@@ -2,7 +2,7 @@
 // TODO => Make tasks dynamic
 
 import React from "react";
-import { ButtonPrimary } from "../button/ButtonPrimary";
+import { Link } from "react-router-dom";
 
 export default class ProgramCard extends React.Component {
   constructor(props) {
@@ -40,27 +40,29 @@ export default class ProgramCard extends React.Component {
         {this.props.cards.map(card => {
           return (
             <div
-              className="card"
+              className={`card ${
+                this.props.program !== null ? "hide" : null
+              }  `}
               key={card.id}
               id={card.id}
               onMouseEnter={this.showOverlay}
               onMouseLeave={this.hideOverlay}
             >
               <span className="card__hover hide">
-                <span
-                  className="select__container"
-                  >
-                  <input
-                    type="checkbox"
-                    checked={this.state.checked}
-                    />
+                <span className="select__container">
+                  <input type="checkbox" checked={this.state.checked} />
                   <span className="select__checkbox" />
                 </span>
-                <ButtonPrimary
-                  text={this.props.button}
-                  style="card__hover--button"
-                  event={(e) => this.props.click(e, card)}
-                />
+                <Link className='card__button' to={`/programs/${card.id}`}>
+                  <button
+                    className='card__hover--button button__primary'
+                    onClick={e => {
+                      this.props.click(e, card);
+                    }}
+                  >
+                    {this.props.button}
+                  </button>
+                </Link>
               </span>
 
               <div className="card__overview">
@@ -91,11 +93,14 @@ export default class ProgramCard extends React.Component {
                       viewBox="0 0 24 24"
                     >
                       <path d="M0 0h24v24H0z" fill="none" />
-                      <path className="icon check" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                      <path
+                        className="icon check"
+                        d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      />
                     </svg>
                     <p>35 /45 tasks (90% complete)</p>
                   </div>
-                  <div className="card__progress"></div>
+                  <div className="card__progress" />
                 </div>
               </div>
             </div>
