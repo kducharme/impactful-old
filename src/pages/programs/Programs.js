@@ -23,15 +23,6 @@ export default class Programs extends React.Component {
     }));
   };
 
-  showProjects = e => {
-    const program = e.currentTarget.parentNode.parentNode.id;
-    this.setState({
-      activeProgram: program,
-      programs: null
-    });
-    console.log(this.state.activeProgram);
-  };
-
   render() {
     return (
       <GlobalProvider>

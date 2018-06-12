@@ -18,7 +18,6 @@ export class GlobalProvider extends React.Component {
     projectActive: null,
     projectActiveManager: null,
     projectActiveUsers: []
-
   };
 
   componentDidMount() {
@@ -33,13 +32,21 @@ export class GlobalProvider extends React.Component {
     .then(users => this.setState({ users }));
   }
 
+  showProjects = (e) => {
+    const program = e.currentTarget.parentNode.parentNode.id;
+    this.setState({
+      activeProgram: program,
+      programs: null
+    });
+  };
+
   render() {
     return (
       <GlobalContext.Provider
         value={{
           organization: this.state.organization,
           organizationUsers: this.state.organizationUsers,
-          
+
           programs: this.state.programs,
           programsSelected: this.state.programsSelected,
           programActive: this.state.programActive,
@@ -51,6 +58,8 @@ export class GlobalProvider extends React.Component {
           projectActive: this.state.projectActive,
           projectManager: this.state.projectManager,
           projectUsers: this.state.projectUsers,
+
+          showProjects: this.showProjects
         }}
       >
         {this.props.children}
