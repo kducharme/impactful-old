@@ -24,7 +24,7 @@ export default class ProjectCard extends React.Component {
                   onMouseEnter={this.showOverlay}
                   onMouseLeave={this.hideOverlay}
                 >
-                  <span className="card__hover hide">
+                  <span className="card__hover">
                     <span className="select__container">
                       <input type="checkbox" checked={this.state.checked} />
                       <span className="select__checkbox" />

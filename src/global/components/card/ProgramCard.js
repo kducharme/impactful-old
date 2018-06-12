@@ -32,7 +32,7 @@ export default class ProgramCard extends React.Component {
     if (!e.currentTarget.checked) {
       e.target.parentElement.classList.toggle("card__selected");
     }
-  }
+  }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
   render() {
     return (

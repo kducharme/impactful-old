@@ -35,7 +35,8 @@ export class GlobalProvider extends React.Component {
   }
 
   showNextLayer = (e) => {
-    const selectedProgram = e.currentTarget.parentNode.parentNode.id;
+    const selectedProgram = e.currentTarget.parentNode.parentNode.parentNode.id;
+    console.log(selectedProgram)
     fetch(
       `http://localhost:4000/programs?organization=${this.state.organization}&id=${selectedProgram}`
     )
