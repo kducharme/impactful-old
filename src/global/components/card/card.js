@@ -14,8 +14,6 @@ export default class Card extends React.Component {
     };
   }
 
-  componentDidMount() {}
-
   showOverlay = e => {
     const overlay = e.currentTarget.children[0];
     overlay.classList.remove("hide");
@@ -36,10 +34,6 @@ export default class Card extends React.Component {
     }
   }
 
-  CardUsers() {
-    console.log("users");
-  }
-
   render() {
     return (
       <React.Fragment>
@@ -48,25 +42,24 @@ export default class Card extends React.Component {
             <div
               className="card"
               key={card.id}
+              id={card.id}
               onMouseEnter={this.showOverlay}
               onMouseLeave={this.hideOverlay}
             >
               <span className="card__hover hide">
                 <span
                   className="select__container"
-                  onClick={e => this.selectCard(e, card)}
-                >
+                  >
                   <input
                     type="checkbox"
-                    // onChange={() => this.props.select(card.id)}
                     checked={this.state.checked}
-                  />
+                    />
                   <span className="select__checkbox" />
                 </span>
                 <ButtonPrimary
                   text={this.props.button}
                   style="card__hover--button"
-                  onClick={null}
+                  event={(e) => this.props.click(e, card)}
                 />
               </span>
 

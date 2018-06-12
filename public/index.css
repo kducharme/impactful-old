@@ -24,12 +24,20 @@ button:hover, button:active, button:focus, a:hover, a:focus, input:focus, input:
   padding: 0 80px 0 80px; }
 
 .content__sub {
-  height: calc(100vh - 44px - 40px);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
+  height: calc(100vh - 44px - 40px);
+  flex-wrap: wrap;
   padding-top: 32px; }
+
+@media (max-width: 750px) {
+  .content__sub {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row; } }
 
 .content__full {
   height: calc(100vh - 44px); }
@@ -149,6 +157,7 @@ nav {
   border-radius: 10px;
   height: 310px;
   width: 275px;
+  min-width: 275px;
   margin-right: 20px; }
   .card .card__overview {
     position: absolute;
