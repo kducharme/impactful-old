@@ -40,7 +40,7 @@ export default class Programs extends React.Component {
         <PrimaryNavigation />
         <SecondaryNavigation />
         <div className="content content__sub">
-          <Card cards={this.state.programs} select={this.selectProjects} users={this.state.users}/>
+          <Card cards={this.state.programs} select={this.selectProjects} users={this.state.users} button={'View program'}/>
         </div>
       </div>
     );
