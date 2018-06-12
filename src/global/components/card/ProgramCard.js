@@ -4,7 +4,7 @@
 import React from "react";
 import { ButtonPrimary } from "../button/ButtonPrimary";
 
-export default class Card extends React.Component {
+export default class ProgramCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

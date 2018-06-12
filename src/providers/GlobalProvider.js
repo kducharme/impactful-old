@@ -10,12 +10,14 @@ export class GlobalProvider extends React.Component {
     programs: [],
     programsSelected: [],
     programActive: null,
+    programActiveName: null,
     programActiveManager: null,
     programActiveUsers: [],
-
+    
     projects: [],
     projectsSelected: [],
     projectActive: null,
+    projectActiveName: null,
     projectActiveManager: null,
     projectActiveUsers: []
   };
@@ -32,12 +34,30 @@ export class GlobalProvider extends React.Component {
     .then(users => this.setState({ users }));
   }
 
-  showProjects = (e) => {
-    const program = e.currentTarget.parentNode.parentNode.id;
+  showNextLayer = (e) => {
+    const selectedProgram = e.currentTarget.parentNode.parentNode.id;
+    console.log(this.state.organization, selectedProgram)
+    fetch(
+      `http://localhost:4000/programs?organization=${this.state.organization}&id=${selectedProgram}`
+    )
+      .then(r => r.json())
+      .then(program => this.setState({
+        programActive: program[0].id,
+        programActiveName: program[0].name
+      }));
+  };
+
+  showAllPrograms = () => {
     this.setState({
-      activeProgram: program,
-      programs: null
-    });
+      programActive: null,
+      programACtiveName: null
+    })
+  }
+
+  selectProjects = project => {
+    this.setState(prevState => ({
+      projectsSelecter: [...prevState.projectsSelecter, project]
+    }));
   };
 
   render() {
@@ -50,16 +70,19 @@ export class GlobalProvider extends React.Component {
           programs: this.state.programs,
           programsSelected: this.state.programsSelected,
           programActive: this.state.programActive,
+          programActiveName: this.state.programActiveName,
           programActiveManager: this.state.programActiveManager,
           programActiveUsers: this.state.programActiveUsers,
 
           projects: this.state.projects,
           projectsSelected: this.state.projectsSelected,
           projectActive: this.state.projectActive,
+          projectActiveName: this.state.projectActiveName,
           projectManager: this.state.projectManager,
           projectUsers: this.state.projectUsers,
 
-          showProjects: this.showProjects
+          showNextLayer: this.showNextLayer,
+          showAllPrograms: this.showAllPrograms
         }}
       >
         {this.props.children}

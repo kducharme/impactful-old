@@ -16,6 +16,7 @@
     position: absolute;
     z-index: 998;
     padding: 32px 24px 24px 24px;
+    min-height: 174px!important;
 
     h4 {
       font-size: 15px;
@@ -42,6 +43,7 @@
     position: absolute;
     width: 100%;
     padding: 24px;
+    top: 134px;
     margin: 40px -20px 0 -20px;
     border-top: 1px solid $grayBorder;
     left: 20px;
