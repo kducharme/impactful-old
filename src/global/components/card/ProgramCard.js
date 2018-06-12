@@ -32,7 +32,7 @@ export default class ProgramCard extends React.Component {
     if (!e.currentTarget.checked) {
       e.target.parentElement.classList.toggle("card__selected");
     }
-  }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+  }
 
   render() {
     return (
@@ -53,12 +53,13 @@ export default class ProgramCard extends React.Component {
                   <input type="checkbox" checked={this.state.checked} />
                   <span className="select__checkbox" />
                 </span>
-                <Link className='card__button' to={`/programs/${card.id}`}>
+                <Link 
+                  className='card__button'
+                  to={`/programs/${card.id}`}
+                  onClick={e => { this.props.click(e, card); }}
+                  >
                   <button
                     className='card__hover--button button__primary'
-                    onClick={e => {
-                      this.props.click(e, card);
-                    }}
                   >
                     {this.props.button}
                   </button>

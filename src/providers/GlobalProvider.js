@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export const GlobalContext = React.createContext();
 
@@ -13,7 +13,7 @@ export class GlobalProvider extends React.Component {
     programActiveName: null,
     programActiveManager: null,
     programActiveUsers: [],
-    
+
     projects: [],
     projectsSelected: [],
     projectActive: null,
@@ -27,32 +27,17 @@ export class GlobalProvider extends React.Component {
     fetch(`http://localhost:4000/programs?programs=${this.state.organization}`)
       .then(r => r.json())
       .then(programs => this.setState({ programs }));
-
-    // Gets the organization's users
-    fetch(`http://localhost:4000/users?orgranization=${this.state.organization}`)
-    .then(r => r.json())
-    .then(users => this.setState({ users }));
   }
 
-  showNextLayer = (e) => {
-    const selectedProgram = e.currentTarget.parentNode.parentNode.parentNode.id;
-    console.log(selectedProgram)
+  showNextLayer = e => {
+    const selectedProgram = e.currentTarget.parentNode.parentNode.id;
+
     fetch(
       `http://localhost:4000/programs?organization=${this.state.organization}&id=${selectedProgram}`
     )
       .then(r => r.json())
-      .then(program => this.setState({
-        programActive: program[0].id,
-        programActiveName: program[0].name
-      }))
-      .then( program =>
-        fetch(
-        `http://localhost:4000/projects?program=${selectedProgram}`
-      )
-        .then(r => r.json())
-        .then(projects => this.setState({
-          projects: projects
-        }))
+      .then(program =>
+        console.log(selectedProgram)
       )
   };
 
@@ -60,8 +45,8 @@ export class GlobalProvider extends React.Component {
     this.setState({
       programActive: null,
       programACtiveName: null
-    })
-  }
+    });
+  };
 
   selectProjects = project => {
     this.setState(prevState => ({
@@ -98,6 +83,4 @@ export class GlobalProvider extends React.Component {
       </GlobalContext.Provider>
     );
   }
-
-
 }
