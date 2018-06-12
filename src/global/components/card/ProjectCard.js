@@ -1,12 +1,9 @@
-// TODO => HOOK UP CHECK MARKS TO SEND TO STATE AT PROGRAM LEVEL
-// TODO => Make tasks dynamic
-
 import React from "react";
 import { ButtonPrimary } from "../button/ButtonPrimary";
 import { withRouter } from "react-router-dom";
 import { GlobalContext } from "../../../providers/GlobalProvider";
 
-export default class ProgramCard extends React.Component {
+export default class ProjectCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,37 +13,14 @@ export default class ProgramCard extends React.Component {
     };
   }
 
-  showOverlay = e => {
-    const overlay = e.currentTarget.children[0];
-    overlay.classList.remove("hide");
-  };
-
-  hideOverlay = e => {
-    const overlay = e.currentTarget.children[0];
-    overlay.classList.add("hide");
-  };
-
-  selectCard(e, card) {
-    this.setState({ checked: !this.state.checked });
-    if (e.currentTarget.checked) {
-      e.target.parentElement.classList.toggle("card__selected");
-    }
-    if (!e.currentTarget.checked) {
-      e.target.parentElement.classList.toggle("card__selected");
-    }
-  }
-
   render() {
     return (
-      // <GlobalContext.Consumer>
-      //   {value => {
           <React.Fragment>
             {this.props.cards.map(card => {
+                console.log(this.props)
               return (
                 <div
-                  className={`card ${
-                    this.props.program !== null ? "hide" : null
-                  }  `}
+                  className={`card`}
                   key={card.id}
                   id={card.id}
                   onMouseEnter={this.showOverlay}
@@ -62,7 +36,6 @@ export default class ProgramCard extends React.Component {
                       style="card__hover--button"
                       event={e => {
                         this.props.click(e, card);
-                        // history.push('/new-location')
                       }}
                     />
                   </span>
@@ -109,8 +82,6 @@ export default class ProgramCard extends React.Component {
               );
             })}
           </React.Fragment>
-      //   }}
-      // </GlobalContext.Consumer>
     );
   }
 }
