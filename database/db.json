@@ -67,7 +67,7 @@
         {
             "id": 1,
             "name": "Home Repair Program",
-            "description": "Since 1969, ASP's Home Repair Program has made homes warmer, safer, and drier in Central Appalachia.",
+            "description": "Since 1969, ASP's Home Repair Program has brought more than 300,000 volunteers to Central Appalachia to help make homes warmer, safer, and drier.",
             "date_created": "March 12, 1982",
             "date_deleted": null,
             "date_archived": null,
@@ -77,8 +77,8 @@
         },
         {
             "id": 2,
-            "name": "New Build",
-            "description": "After responding to floods in Tennessee, ASP officially launched its New Build program.",
+            "name": "New Build Program",
+            "description": "After responding to floods in Tennessee, ASP officially launched its New Build program, and now, five years later, has built more than 100 new homes.",
             "date_created": "January 12, 2018",
             "date_deleted": null,
             "date_archived": null,
