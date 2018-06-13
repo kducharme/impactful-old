@@ -1,10 +1,11 @@
 import React from "react";
+import ProgramList from '../pages/programList/ProgramList'
 
 export const GlobalContext = React.createContext();
 
 export class GlobalProvider extends React.Component {
   state = {
-    organization: 1, // TODO => make dynamic based in logged in user
+    organization: 1,
     organizationUsers: [],
 
     programs: [],
@@ -22,30 +23,20 @@ export class GlobalProvider extends React.Component {
     projectActiveUsers: []
   };
 
-  componentDidMount() {
-    // Gets the organization's programs
-    fetch(`http://localhost:4000/programs?programs=${this.state.organization}`)
-      .then(r => r.json())
-      .then(programs => this.setState({ programs }));
-  }
-
   showNextLayer = e => {
-    const selectedProgram = e.currentTarget.parentNode.parentNode.id;
-
-    fetch(
-      `http://localhost:4000/programs?organization=${this.state.organization}&id=${selectedProgram}`
-    )
-      .then(r => r.json())
-      .then(program =>
-        console.log(selectedProgram)
-      )
+    const program = e.currentTarget.parentNode.parentNode.id;
+    this.setState({programActiveName : program})
   };
 
-  showAllPrograms = () => {
+  showAllPrograms = (programs) => {
     this.setState({
       programActive: null,
       programACtiveName: null
     });
+  };
+
+  loadPrograms = (programs) => {
+    this.setState({ programs });
   };
 
   selectProjects = project => {
@@ -76,7 +67,8 @@ export class GlobalProvider extends React.Component {
           projectUsers: this.state.projectUsers,
 
           showNextLayer: this.showNextLayer,
-          showAllPrograms: this.showAllPrograms
+          showAllPrograms: this.showAllPrograms,
+          loadPrograms: this.loadPrograms
         }}
       >
         {this.props.children}
