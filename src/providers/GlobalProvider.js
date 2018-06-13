@@ -25,7 +25,7 @@ export class GlobalProvider extends React.Component {
 
   showNextLayer = e => {
     const program = e.currentTarget.parentNode.parentNode.id;
-    this.setState({programActiveName : program})
+    this.setState({programActive : program})
   };
 
   showAllPrograms = (programs) => {

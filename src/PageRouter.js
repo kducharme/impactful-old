@@ -14,11 +14,11 @@ export default class PageRouter extends React.Component {
         <Switch>
           <GlobalProvider>
             <Route exact path="/" component={Dashboard} />
-            <Route path="/programs" component={ProgramList} />
-            <Route exact path="/programs/:programId" component={Program} />
+            <Route exact path="/programs" component={ProgramList} />
+            <Route path="/:id" component={Program} />
             <Route path="/indiv" component={Program} />
             <Route path="/settings" component={Settings} />
-            <Route component={NotFound} />
+            {/* <Route component={NotFound} /> */}
           </GlobalProvider>
         </Switch>
       </Router>

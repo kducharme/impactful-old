@@ -15,7 +15,7 @@ class SecondaryNavigation extends React.Component {
                 <Link
                   className={`sub__nav--link
                       ${
-                        window.location.pathname === "/programs"
+                        (window.location.href.indexOf("/programs") > -1)
                           ? "sub__active"
                           : null
                       }`}
@@ -28,7 +28,7 @@ class SecondaryNavigation extends React.Component {
                 {/* ARROW DIVIDER */}
                 <svg
                   className={`${
-                    value.programActive === null ? "sub__divider--hide" : null
+                    (window.location.href.indexOf("/programs-") > -1) ? null : "sub__divider--hide"
                   }`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

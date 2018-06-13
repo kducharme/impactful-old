@@ -16,7 +16,7 @@ class PrimaryNavigation extends React.Component {
             <Link
             className={
               `nav__link
-              ${(window.location.href.indexOf("/programs/") > -1) ? "active" : null }
+              ${(window.location.href.indexOf("/programs-") > -1) ? "active" : null }
               ${window.location.pathname === "/programs" ? "active" : null }
             `}
               to="/programs">Programs

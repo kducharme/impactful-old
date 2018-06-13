@@ -2,7 +2,7 @@ import React from "react";
 import PrimaryNavigation from "../../global/navigation-primary/PrimaryNavigation";
 import SecondaryNavigation from "../../global/navigation-secondary/SecondaryNavigation";
 import ProgramCard from "../../global/components/card/ProgramCard";
-import ProjectCard from "../../global/components/card/ProjectCard";
+import Program from "../program/Program";
 import { GlobalContext, GlobalProvider } from "../../providers/GlobalProvider";
 
 export default class ProgramList extends React.Component {
@@ -32,7 +32,9 @@ export default class ProgramList extends React.Component {
               <div className="content content__sub">
                 <ProgramCard
                   cards={this.state.allPrograms}
-                  click={e => value.showNextLayer(e)}
+                  click={e => {
+                    value.showNextLayer(e)
+                  }}
                   users={value.users}
                   button={"View program"}
                   program={value.programActive}

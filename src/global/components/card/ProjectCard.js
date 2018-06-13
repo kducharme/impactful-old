@@ -15,7 +15,6 @@ export default class ProjectCard extends React.Component {
     return (
           <React.Fragment>
             {this.props.cards.map(card => {
-                console.log(this.props)
               return (
                 <div
                   className={`card`}

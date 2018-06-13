@@ -55,7 +55,7 @@ export default class ProgramCard extends React.Component {
                 </span>
                 <Link 
                   className='card__button'
-                  to={`/programs/${card.id}`}
+                  to={`/programs-${card.id}`}
                   onClick={e => { this.props.click(e, card); }}
                   >
                   <button
