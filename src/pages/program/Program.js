@@ -6,8 +6,38 @@ import Groups from "./Groups";
 import { GlobalContext, GlobalProvider } from "../../providers/GlobalProvider";
 
 export default class Program extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      program: null,
+      projects: []
+    };
+  }
+
+  getProgram = id => {
+    this.setState({ program: id });
+  };
+
+  componentWillMount() {
+    this.state.program;
+  }
+
   componentDidMount() {
-    console.log('program')
+
+  }
+
+  testFunction = () => {
+    <GlobalContext.Consumer>
+    {value => {
+      console.log('woo')
+      fetch(`http://localhost:4000/projects?program=1`)
+        .then(r => r.json())
+        .then(projects => {
+          console.log(projects)
+          this.setState({ projects });
+        });
+    }}
+</GlobalContext.Consumer>
   }
 
   render() {
@@ -18,11 +48,12 @@ export default class Program extends React.Component {
             return (
               <div>
                 <PrimaryNavigation />
-                <SecondaryNavigation />
+                <SecondaryNavigation 
+                />
                 <div className="program">
                   <Groups />
                   <ProjectCard
-                    cards={value.projects}
+                    cards={this.state.projects}
                     click={() => console.log("proj click")}
                     button={"View project"}
                     program={value.programActive}
