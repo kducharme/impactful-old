@@ -6,6 +6,10 @@ import Groups from "./Groups";
 import { GlobalContext, GlobalProvider } from "../../providers/GlobalProvider";
 
 export default class Program extends React.Component {
+  componentDidMount() {
+    console.log('program')
+  }
+
   render() {
     return (
       <GlobalProvider>

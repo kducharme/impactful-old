@@ -14,7 +14,9 @@ export default class PageRouter extends React.Component {
         <Router>
             <Switch>
                 <Route exact path='/' component={Dashboard}></Route>
-                <Route path='/programs' component={ProgramList}></Route>
+                <Route exact path='/programs' component={ProgramList}></Route>
+                <Route exact path='/programs/' component={ProgramList}></Route>
+                {/* <Route exact path='/programs/:programId' component={Program}></Route> */}
                 <Route path='/indiv' component={Program}></Route>
                 <Route path='/settings' component={Settings}></Route>
                 <Route component={NotFound}></Route>
